@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu primeiro programa!</title>
+        <style>
+            body {
+                background-color: rgb(90, 50, 170);
+                color: whitesmoke;
+                font: normal 20pt Tahoma;
+            }
+            /* Comentário em CSS */
+            h1 {
+                color: rgb(253, 196, 39);
+            }
+        </style>
+    </head>
+    <!--
+        Comentário em HTML
+    -->
+    <body>
+        <H1>Hello World!</H1>
+        <p>Tudo nos conformes (y)'</p>
+        <script>
+            //window.alert('Minha primeira mensagem!');
+            //window.confirm('Está gostando de JavaScript?');
+            //var nome = window.prompt('Qual seu nome?');
+            //window.alert('O nome digitado foi: ' + nome);
+            var numero1 = Number.parseFloat(window.prompt('Digite um número'));
+            var numero2 = Number(prompt('Digite outro número'));
+            var soma = numero1 + numero2;
+            var string = soma.toString(); //String(soma)
+            window.prompt(string.length);
+            window.alert(`A soma entre ${numero1} e ${numero2} foi de: ${soma}`);
+        </script>
+    </body>
+</html>

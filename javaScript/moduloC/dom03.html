@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03 DOM - Somando Números</title>
+    <style>
+        body {
+            background: purple;
+            font: normal 18pt tahoma;
+            color: gold;
+        }
+        
+        h1 {
+            font: tahoma;
+        }
+
+        input {
+            font: normal 18pt Tahoma;
+            width: 100px;
+        }
+
+        div#result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtInput1"> +
+    <input type="number" name="txtn2" id="txtInput2">
+    <input type="button" value="Somar" onclick="somar()">
+    <input type="number" name="resultSum" id="resultSum">
+    <div id="result">Resultado: [ ]</div>
+    <script>
+        function somar() {
+            var getInput1 = document.getElementById('txtInput1');
+            var getInput2 = document.querySelector('input#txtInput2');
+            var divResult = document.querySelector('div#result');
+            var numb1 = Number(getInput1.value);
+            var numb2 = Number(getInput2.value);
+            var sum = numb1 + numb2;
+            divResult.innerHTML = `Resultado: [<strong>${sum}</strong>]`;
+        }
+    </script>
+</body>
+</html>

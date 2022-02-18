@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula sobre DOM</title>
+    <!---->
+    <style>
+        body {
+            background:rgb(230, 53, 29);
+            color: rgb(241, 236, 236);
+            font: normal 16pt Tahoma;
+        }
+
+        h1 {
+            font: normal 22pt tahoma black;
+            color: rgb(241, 236, 236);
+        }
+        
+        div {
+            font: normal 20pt tahoma black;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM!</h1>
+    <p>Aqui vai o resultado</p>
+    <p name="result">Aprendendo a usar o <strong>DOM</strong> em <i>JavaScript</i>.</p>
+    <div id="msg">Clique em mim!</div>
+    <script>
+        var corpo = document.body;
+        corpo.style.background = 'rgb(2, 2, 2)';
+        var getTagName = document.getElementsByTagName('p')[1];
+        getTagName.style.color = 'greenyellow';
+        /*
+        document.write('</br>', getTagName.innerHTML);
+        var result = document.getElementById('msg');
+        result.style.background = 'purple';
+        //result.innerText = 'Aguardando resposta...';
+        document.getElementById('msg').innerHTML = 'Testando mudança...';
+        */
+        var pegueSeletor = document.querySelector('div#msg'); //(class = .) (id = #)
+        pegueSeletor.style.color = 'gold';
+        pegueSeletor.style.background = 'purple';
+    </script>
+</body>
+</html>

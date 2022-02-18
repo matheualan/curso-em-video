@@ -1,0 +1,105 @@
+package poo.java.encapsulamento;
+
+public class Livro implements Publicacao {
+
+    private String titulo, autor;
+    private int totPag, pagAtual;
+    private boolean aberto;
+    private Pessoa leitor;
+
+    @Override
+    public String detalhes() {
+        return  "\n\t\t\t=== LIVRO === \n" + "Titulo: " + titulo + ", Autor: " + autor + ";\nTotal de Paginas: " + totPag + ", Pagina Atual: "
+                + pagAtual + ";\nAberto: " + aberto + ";\nLeitor: " + leitor.getNome() + ", Idade: " + leitor.getIdade()
+                + ", Sexo: " + leitor.getSexo() + ";";
+    }
+
+    public Livro(String titulo, String autor, int totPag, Pessoa leitor) {
+        this.setTitulo(titulo);
+        this.setAutor(autor);
+        this.setTotPag(totPag);
+        this.setPagAtual(0);
+        this.setAberto(false);
+        this.setLeitor(leitor);
+
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getTotPag() {
+        return totPag;
+    }
+
+    public void setTotPag(int totPag) {
+        this.totPag = totPag;
+    }
+
+    public int getPagAtual() {
+        return pagAtual;
+    }
+
+    public void setPagAtual(int pagAtual) {
+        this.pagAtual = pagAtual;
+    }
+
+    public boolean isAberto() {
+        return aberto;
+    }
+
+    public void setAberto(boolean aberto) {
+        this.aberto = aberto;
+    }
+
+    public Pessoa getLeitor() {
+        return leitor;
+    }
+
+    public void setLeitor(Pessoa leitor) {
+        this.leitor = leitor;
+    }
+
+    @Override
+    public void abrir() {
+        this.setAberto(true);
+
+    }
+
+    @Override
+    public void fechar() {
+        this.setAberto(false);
+    }
+
+    @Override
+    public void folhear(int pag) {
+        if (pag > this.getTotPag()) {
+            this.setPagAtual(0);
+        } else {
+            this.setPagAtual(pag);
+        }
+    }
+
+    @Override
+    public void avancarPag() {
+        this.setPagAtual(getPagAtual()+1);
+
+    }
+
+    @Override
+    public void voltarPag() {
+        this.setPagAtual(getPagAtual()-1);
+    }
+}
