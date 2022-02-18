@@ -33,16 +33,20 @@
     <input type="number" name="txtn2" id="txtInput2">
     <input type="button" value="Somar" onclick="somar()">
     <input type="number" name="resultSum" id="resultSum">
-    <div id="result">Resultado: [ ]</div>
+    <div id="result">Resultado: []</div>
     <script>
         function somar() {
             var getInput1 = document.getElementById('txtInput1');
             var getInput2 = document.querySelector('input#txtInput2');
-            var divResult = document.querySelector('div#result');
             var numb1 = Number(getInput1.value);
             var numb2 = Number(getInput2.value);
             var sum = numb1 + numb2;
+            var divResult = document.querySelector('div#result');
             divResult.innerHTML = `Resultado: [<strong>${sum}</strong>]`;
+            
+            var getInput3 = document.querySelector('input#resultSum');
+            var result = Number(getInput3);
+            result.innerHTML = sum;
         }
     </script>
 </body>

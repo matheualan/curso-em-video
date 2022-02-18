@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN - PE</title>
+    <style>
+        body {
+            background: blue;
+            font: normal 15pt Tahoma;
+        }
+        input#txtvel {
+            width: 50px;
+        }
+        p#p1 {
+            font: normal 18pt Tahoma;
+        }
+        div#result {
+            height: 7px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <p id="p1">Velocidade do Carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" onclick="calcularMulta()"></p>
+    <div id="result"></div>
+    <script>
+        function calcularMulta() {
+            var getInput1 = Number(document.querySelector('input#txtvel').value)
+            var divResult = document.getElementById('result')
+            divResult.innerHTML = `<p>Velocidade atual <strong>${getInput1} Km/h</strong></p>`
+            if (getInput1 > 60) {
+                divResult.innerHTML = `<strong>${getInput1} Km/h</strong>. Velocidade acima do permitido! <strong>Multa aplicada!</strong>`
+            }
+            divResult.innerHTML += `<p>Use sempre o cinto de segurança!</p>`
+        }
+    </script>
+</body>
+</html>

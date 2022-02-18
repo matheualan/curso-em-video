@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou Estrangeiro</title>
+    <style>
+        body {
+            background: palevioletred;
+            font: normal 20pt Tahoma;
+            color: whitesmoke;
+        }
+        input#txt1 {
+            width: 115px;
+        }
+        p {
+            font: normal 17pt tahoma;
+        }
+        div#div1 {
+            height: 7px;
+        }
+    </style>
+</head>
+<body>
+    <h1>É Brasileiro ou não É !?</h1>
+    <p>Digite seu país de origem: <input type="text" id="txt1">
+    <input type="button" value="Verificar" onclick="verifique()"></p>
+    <div id="div1"></div>
+    <script>
+        function verifique() {
+            var verifique = document.getElementById('txt1')
+            var getDiv = document.querySelector('div#div1')
+            if (verifique == 'Brasil') {
+                getDiv.innerHTML = `Seja bem vindo(a) BRASILEIRO! Bom te ter de volta em casa!`
+            } else {
+                getDiv.innerHTML = `Seja bem vindo(a) ESTRANGEIRO!! Apresente seu passaporte!`
+            }
+        }
+    </script>
+</body>
+</html>
