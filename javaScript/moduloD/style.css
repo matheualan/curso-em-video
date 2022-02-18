@@ -1,0 +1,25 @@
+body {
+    background: palevioletred;
+    font: normal 15pt Tahoma;
+    color: whitesmoke;
+}
+
+header {
+    color: rgba(0, 0, 0, 0.596);
+    text-align: center;
+}
+
+section {
+    background: rgb(207, 154, 154);
+    border-radius: 7px;
+    width: 480px;
+    padding: 15px;
+    margin: auto;
+    box-shadow: 3px 3px 7px black;
+}
+
+footer {
+    color: black;
+    text-align: center;
+    font-style: italic;
+}
